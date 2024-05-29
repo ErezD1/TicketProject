@@ -1,0 +1,250 @@
+### Create User
+POST http://localhost:8080/api/v1/auth/register
+Content-Type: application/json
+Authorization: Basic admin Passw0rd1!
+
+{
+  "username": "admin",
+  "password": "Passw0rd1!",
+  "email": "admin1@example.com",
+  "roles": ["ADMIN"]
+}
+
+
+### Create User
+POST http://localhost:8080/api/v1/auth/register
+Content-Type: application/json
+Authorization: Basic admin Passw0rd1!
+
+{
+  "username": "user",
+  "password": "Passw0rd1!",
+  "email": "user@example.com",
+  "roles": ["USER"]
+}
+
+
+
+###register a user:
+POST http://localhost:8080/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "username": "avi",
+  "email": "avi@gmail.com",
+  "password": "Passw0rd1!"
+}
+
+
+###Create new Ticket
+POST http://localhost:8080/api/v1/tickets
+Content-Type: application/json
+Authorization: bearer {{userJWT}}
+
+{
+  "subject": "Issue 2",
+  "description": "Details about Issue 2"
+}
+
+###Create new Ticket
+POST http://localhost:8080/api/v1/tickets
+Content-Type: application/json
+Authorization: bearer {{userJWT}}
+
+{
+  "subject": "Issue 2",
+  "description": "Details about Issue 2"
+}
+
+###Create new Ticket
+POST http://localhost:8080/api/v1/tickets
+Content-Type: application/json
+Authorization: bearer {{adminJWT}}
+
+{
+  "subject": "Issue 2",
+  "description": "Details about Issue 2"
+}
+
+### Update User
+GET http://localhost:8080/api/v1/users/2
+Content-Type: application/json
+Authorization: Bearer {{adminJWT}}
+
+{
+  "username": "updatedUser",
+  "email": "updateduser@example.com",
+  "role": "ROLE_USER"
+}
+
+### Create New User From Console
+POST http://localhost:8080/api/v1/users/create
+Content-Type: application/json
+Authorization: Bearer {{adminJWT}}
+
+{
+  "username": "user",
+  "password": "Passw0rd1!",
+  "email": "updateduser@example.com",
+  "roles": ["ROLE_ADMIN"]
+}
+
+
+
+### Get all Users
+GET http://localhost:8080/api/v1/users/all
+Content-Type: application/json
+Authorization: bearer {{adminJWT}}
+
+
+### Get User by ID
+GET http://localhost:8080/api/v1/users/1
+Accept: application/json
+Authorization: bearer {{adminJWT}}
+
+
+### Delete User
+DELETE http://localhost:8080/api/v1/users/1
+
+
+
+### Get All Tickets
+GET http://localhost:8080/api/v1/tickets
+Accept: application/json
+Authorization: bearer {{adminJWT}}
+
+### Get All Tickets
+GET http://localhost:8080/api/v1/tickets?pageNo=1&pageSize=5&sortDir=asc
+Accept: application/json
+Authorization: bearer {{adminJWT}}
+
+
+### Get Ticket by ID
+GET http://localhost:8080/api/v1/tickets/8
+Accept: application/json
+Authorization: Bearer {{adminJWT}}
+
+
+### Update Ticket
+PUT http://localhost:8080/api/v1/tickets/16/update
+Content-Type: application/json
+Authorization: bearer {{userJWT}}
+
+{
+  "subject": "Updated Issue Title",
+  "description": "Updated details about the issue..."
+}
+
+###
+
+### Close Ticket
+PUT http://localhost:8080/api/v1/tickets/8/close
+Content-Type: application/json
+Authorization: Bearer {{adminJWT}}
+
+{
+  "closingComment": "Fixed the issue old"
+}
+
+### Open Ticket
+PUT http://localhost:8080/api/v1/tickets/8/open
+Content-Type: application/json
+Authorization: Bearer {{adminJWT}}
+
+{
+  "closingComment": "Fixed the issue new"
+}
+
+### Close Ticket
+PUT http://localhost:8080/api/v1/tickets/8/close
+Content-Type: application/json
+Authorization: Bearer {{userJWT}}
+
+{
+  "closingComment": "Fixed the issue old"
+}
+
+### Open Ticket
+PUT http://localhost:8080/api/v1/tickets/8/open
+Content-Type: application/json
+Authorization: Bearer {{userJWT}}
+
+{
+  "closingComment": "Fixed the issue new"
+}
+
+###
+
+### post a new comment
+POST http://localhost:8080/api/v1/tickets/2/comments
+Content-Type: application/json
+Authorization: Basic admin Passw0rd1!
+
+{
+  "content": "Further information new"
+}
+
+### post a new comment
+POST http://localhost:8080/api/v1/tickets/3/comments
+Content-Type: application/json
+Authorization: Bearer {{adminJWT}}
+
+{
+  "content": "Further information"
+}
+
+### Update a new comment
+PUT http://localhost:8080/api/v1/tickets/3/comments/2
+Content-Type: application/json
+Authorization: Bearer {{adminJWT}}
+
+{
+  "content": "Further information 2"
+}
+
+### Delete a new comment
+DELETE http://localhost:8080/api/v1/tickets/3/comments/2
+Content-Type: application/json
+Authorization: Bearer {{adminJWT}}
+
+
+### Demo Authenticated user details:
+GET http://localhost:8080/api/v1/auth/me
+Authorization: bearer {{userJWT}}
+
+### Demo Authenticated user details:
+GET http://localhost:8080/api/v1/auth/me
+Authorization: bearer {{adminJWT}}
+
+
+
+###register a user:
+POST http://localhost:8080/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "username": "moe",
+  "email": "moshiko@gmail.com",
+  "password": "Passw0rd1!"
+}
+
+
+###login as admin:
+POST http://localhost:8080/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "Passw0rd1!"
+}
+
+
+###login as user:
+POST http://localhost:8080/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "username": "user",
+  "password": "Passw0rd1!"
+}
+
