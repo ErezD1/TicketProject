@@ -23,16 +23,10 @@
 
 - [Overview](#overview)
 - [Features](#features)
-- [📂 Project Structure](#-project-structure)
+- [Repository Structure](#repository-structure)
 - [Modules](#modules)
 - [Getting Started](#getting-started)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Tests](#tests)
 - [Project Roadmap](#project-roadmap)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
 </details>
 <hr>
 
@@ -58,38 +52,59 @@ TicketProject is an open-source software project with a robust backend component
 | 🚀 | **Scalability**   | The project showcases scalability potential by leveraging React's component-based architecture, Spring Boot's scalable backend, and TypeScript for code maintainability. However, scalability could be further enhanced by optimizing backend services for high traffic and load scenarios. |
 
 ---
-## 📂 Project Structure
 
-<details closed>
-<summary>Structure</summary>
+## Repository Structure
+
+<details>
+<summary>Click to expand!</summary>
 
 ```sh
-TicketProject
-├── BackEndTicketProject
-│   ├── .DS_Store 2
-│   ├── .gitignore
-│   ├── .mvn
-│   ├── app.log
-│   ├── hs_err_pid28924.log
-│   ├── mvnw
-│   ├── mvnw.cmd
-│   ├── pom.xml
-│   ├── README.md
-│   └── src
-├── FrontEndTicketProject
-│   ├── .gitignore
-│   ├── index.html
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── postcss.config.js
-│   ├── README.md
-│   ├── src
-│   ├── tailwind.config.js
-│   ├── ticketproject-front.zip
-│   ├── tsconfig.json
-│   ├── tsconfig.node.json
-│   └── vite.config.ts
-└── README.md
+┣ 📂BackEndTicketProject
+┃ ┣ 📂src
+┃ ┃ ┣ 📂main
+┃ ┃ ┃ ┣ 📂java
+┃ ┃ ┃ ┃ ┗ 📂edu
+┃ ┃ ┃ ┃   ┗ 📂erezd
+┃ ┃ ┃ ┃     ┗ 📂erezproject
+┃ ┃ ┃ ┃       ┣ 📂config
+┃ ┃ ┃ ┃       ┣ 📂controller
+┃ ┃ ┃ ┃       ┣ 📂dto
+┃ ┃ ┃ ┃       ┃ ┣ 📂comment
+┃ ┃ ┃ ┃       ┃ ┣ 📂error
+┃ ┃ ┃ ┃       ┃ ┣ 📂login
+┃ ┃ ┃ ┃       ┃ ┣ 📂ticket
+┃ ┃ ┃ ┃       ┃ ┗ 📂user
+┃ ┃ ┃ ┃       ┣ 📂entity
+┃ ┃ ┃ ┃       ┣ 📂exception
+┃ ┃ ┃ ┃       ┣ 📂repository
+┃ ┃ ┃ ┃       ┣ 📂security
+┃ ┃ ┃ ┃       ┣ 📂service
+┃ ┃ ┗ 📂test
+┃ ┃   ┗ 📂java
+┃ ┃     ┗ 📂edu
+┃ ┃       ┗ 📂erezd
+┃ ┃         ┗ 📂erezproject
+┃ ┃           ┣ 📂controller
+┃ ┃           ┣ 📂security
+┣ 📂FrontEndTicketProject
+┃ ┣ 📂src
+┃ ┃ ┣ 📂@types
+┃ ┃ ┣ 📂assets
+┃ ┃ ┣ 📂components
+┃ ┃ ┃ ┣ 📂DarkModeToggle
+┃ ┃ ┃ ┣ 📂Navbar
+┃ ┃ ┣ 📂contexts
+┃ ┃ ┣ 📂layout
+┃ ┃ ┃ ┗ 📂root
+┃ ┃ ┣ 📂routes
+┃ ┃ ┃ ┣ 📂about
+┃ ┃ ┃ ┣ 📂adminConsole
+┃ ┃ ┃ ┣ 📂error
+┃ ┃ ┃ ┣ 📂test
+┃ ┃ ┣ 📂services
+┃ ┃ ┣ 📂ui
+┃ ┃ ┣ 📂utils
+┗ 📜README.md
 
 ```
 
@@ -487,43 +502,8 @@ TicketProject
 
 **System Requirements:**
 
-* **Java**: `version x.y.z`
-
-###  Installation
-
-<h4>From <code>source</code></h4>
-
-> 1. Clone the TicketProject repository:
->
-> ```console
-> $ git clone https://github.com/ErezD1/TicketProject
-> ```
->
-> 2. Change to the project directory:
-> ```console
-> $ cd TicketProject
-> ```
->
-> 3. Install the dependencies:
-> ```console
-> $ mvn clean install
-> ```
-
-###  Usage
-
-<h4>From <code>source</code></h4>
-
-> Run TicketProject using the command below:
-> ```console
-> $ java -jar target/myapp.jar
-> ```
-
-###  Tests
-
-> Run the test suite using the command below:
-> ```console
-> $ mvn test
-> ```
+* **Java**: `version 21.0.0`
+* **Java**: `version Latest`
 
 ---
 
@@ -534,61 +514,6 @@ TicketProject
 - [ ] `► ...`
 
 ---
-
-##  Contributing
-
-Contributions are welcome! Here are several ways you can contribute:
-
-- **[Report Issues](https://github.com/ErezD1/TicketProject/issues)**: Submit bugs found or log feature requests for the `TicketProject` project.
-- **[Submit Pull Requests](https://github.com/ErezD1/TicketProject/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
-- **[Join the Discussions](https://github.com/ErezD1/TicketProject/discussions)**: Share your insights, provide feedback, or ask questions.
-
-<details closed>
-<summary>Contributing Guidelines</summary>
-
-1. **Fork the Repository**: Start by forking the project repository to your github account.
-2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
-   ```sh
-   git clone https://github.com/ErezD1/TicketProject
-   ```
-3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
-   ```sh
-   git checkout -b new-feature-x
-   ```
-4. **Make Your Changes**: Develop and test your changes locally.
-5. **Commit Your Changes**: Commit with a clear message describing your updates.
-   ```sh
-   git commit -m 'Implemented new feature x.'
-   ```
-6. **Push to github**: Push the changes to your forked repository.
-   ```sh
-   git push origin new-feature-x
-   ```
-7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
-8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
-</details>
-
-<details closed>
-<summary>Contributor Graph</summary>
-<br>
-<p align="center">
-   <a href="https://github.com{/ErezD1/TicketProject/}graphs/contributors">
-      <img src="https://contrib.rocks/image?repo=ErezD1/TicketProject">
-   </a>
-</p>
-</details>
-
----
-
-##  License
-
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
-
----
-
-##  Acknowledgments
-
-- List any resources, contributors, inspiration, etc. here.
 
 [**Return**](#-overview)
 
